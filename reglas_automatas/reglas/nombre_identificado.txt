@@ -1,0 +1,20 @@
+a = [a_z]
+b = [0_9]
+
+Q = (q0, q1, q2, q3, qf)
+Sigma = {a, b}
+Gamma = {a, b, ƀ}
+S = q1
+F = { qf }
+Blank = ƀ
+
+D(q0, ƀ)=(q1, ƀ, R)
+D(q1, a)=(q2, ƀ, R)
+D(q2, b)=(q3, ƀ, R)
+D(q3, ;)=(qf, ;, S)
+D(q1, b)=(q3, ƀ, R)
+D(q1, ;)=(qf, ;, S)
+D(q2, a)=(q1, ƀ, R)
+D(q2, ;)=(qf, ;, S)
+D(q3, a)=(q1, ƀ, R)
+D(q3, b)=(q2, ƀ, R)

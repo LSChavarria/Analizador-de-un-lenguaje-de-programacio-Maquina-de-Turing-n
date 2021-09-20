@@ -1,0 +1,16 @@
+i = identificador
+s = { : }
+e = expresión_aritmética
+
+Q = (q0, q1, q2, q3, q4, qf)
+Sigma = {i, s, e}
+Gamma = {(i; nombre_identificado), s, (e; expresión_aritmética), ƀ}
+S = q1
+F = { qf }
+Blank = ƀ
+
+D(q0, ƀ)=(q1, ƀ, R)
+D(q1, i)=(q2, ƀ, R)
+D(q2, s)=(q3, ƀ, R)
+D(q3, e)=(q4, ƀ, R)
+D(q4, ƀ)=(qf, ƀ, S)

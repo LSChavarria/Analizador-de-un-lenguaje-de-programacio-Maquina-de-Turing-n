@@ -1,0 +1,9 @@
+programa final12;
+	iniciar
+		leer i; leer i9;
+		leer j;	leer as12;
+		leer k;
+		p : i+j*2;
+		q : (p*k)/50;
+		imprimir q;
+	terminar.

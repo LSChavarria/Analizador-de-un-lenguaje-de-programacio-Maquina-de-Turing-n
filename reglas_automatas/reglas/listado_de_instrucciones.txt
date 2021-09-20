@@ -1,0 +1,15 @@
+p = { ; }
+i = instrucción
+
+Q = (q0, q1, q2, q3, qf)
+Sigma = {p, i}
+Gamma = {p, (i; instrucción_igualdad; instrucción_leer_imprimir), ƀ}
+S = q1
+F = { qf }
+Blank = ƀ
+
+D(q0, ƀ)=(q1, ƀ, R)
+D(q1, i)=(q2, ƀ, R)
+D(q2, p)=(q3, ƀ, R)
+D(q3, ƀ)=(qf, ƀ, S)
+D(q3, i)=(q2, ƀ, R)

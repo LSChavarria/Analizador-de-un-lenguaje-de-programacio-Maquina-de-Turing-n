@@ -1,0 +1,24 @@
+p = programa
+n = nombre
+s = { ; }
+i = iniciar
+l = listado-de-instrucciones
+t = terminar
+d = { . }
+
+Q = (q0, q1, q2, q3, q4, q5, q6, q7, q8, q9, qf)
+Sigma = {p, n, s, i, l, t, d}
+Gamma = {p, (n; nombre_identificado), s, i, (l; listado_de_instrucciones), t, d, ƀ}
+S = q1
+F = { qf }
+Blank = ƀ
+
+D(q0, ƀ)=(q1, ƀ, R)
+D(q1, p)=(q2, ƀ, R)
+D(q2, n)=(q3, ƀ, R)
+D(q3, s)=(q4, ƀ, R)
+D(q4, i)=(q5, ƀ, R)
+D(q5, l)=(q6, ƀ, R)
+D(q7, t)=(q8, ƀ, R)
+D(q8, d)=(q9, ƀ, R)
+D(q9, ƀ)=(qf, ƀ, S)

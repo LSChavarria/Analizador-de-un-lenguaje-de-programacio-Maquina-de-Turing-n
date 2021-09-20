@@ -1,0 +1,28 @@
+c = valores
+s = {+, *, -, /, ^}
+p = { ( }
+q = { ) }
+
+Q = (q0, q1, q2, q3, q4, q5, q6, q7, q8, qf)
+Sigma = {c, s, p, q}
+Gamma = {(c; valores), s, p, q, ƀ}
+S = q1
+F = { qf }
+Blank = ƀ
+
+D(q0, ƀ)=(q1, ƀ, R)
+D(q1, p)=(q2, ƀ, R)
+D(q2, _sigma)=(q2, _sigma, R)
+_sigma = {c, s, p, q}
+D(q2, ƀ)=(q3, ƀ, L)
+D(q3, q)=(q4, ƀ, L)
+D(q4, _sigma)=(q4, _sigma, L)
+D(q4, ƀ)=(q5, ƀ, R)
+D(q5, p)=(q2, ƀ, R)
+D(q5, c)=(q6, ƀ, R)
+D(q1, c)=(q6, ƀ, R)
+D(q6, ƀ)=(qf, ƀ, S)
+D(q6, s)=(q7, ƀ, R)
+D(q7, c)=(q8, ƀ, R)
+D(q8, s)=(q7, ƀ, R)
+D(q8, ƀ)=(qf, ƀ, S)
